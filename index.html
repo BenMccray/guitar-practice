@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Guitar!</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./style.css">
+        <script src="./app.js"></script>
+    </head>
+
+    <body>
+        <div class="topnav">
+
+        </div>
+        <div class="page">
+            <div class="row1">
+                <form class="note-picker" name="note_picker">
+                    <div class="radios">
+                        <input type="radio" value="A" name="notes" id="A" onclick="changeTopic(this)">
+                        <label for="A">A</label>
+                        <input type="radio" value="A#" name="notes" id="A#" onclick="changeTopic(this)">
+                        <label for="A#">A#</label>
+                        <input type="radio" value="B" name="notes" id="B" onclick="changeTopic(this)">
+                        <label for="B">B</label>
+                        <input type="radio" value="C" name="notes" id="C" onclick="changeTopic(this)">
+                        <label for="C">C</label>
+                        <input type="radio" value="C#" name="notes" id="C#" onclick="changeTopic(this)">
+                        <label for="C#">C#</label>
+                        <input type="radio" value="D" name="notes" id="D" onclick="changeTopic(this)">
+                        <label for="D">D</label>
+                        <input type="radio" value="D#" name="notes" id="D#" onclick="changeTopic(this)">
+                        <label for="D#">D#</label>
+                        <input type="radio" value="E" name="notes" id="E" onclick="changeTopic(this)">
+                        <label for="E">E</label>
+                        <input type="radio" value="F" name="notes" id="F" onclick="changeTopic(this)">
+                        <label for="F">F</label>
+                        <input type="radio" value="F#" name="notes" id="F#" onclick="changeTopic(this)">
+                        <label for="F#">F#</label>
+                        <input type="radio" value="G" name="notes" id="G" onclick="changeTopic(this)">
+                        <label for="G">G</label>
+                        <input type="radio" value="G#" name="notes" id="G#" onclick="changeTopic(this)">
+                        <label for="G#">G#</label>
+                    </div>
+
+                    <div class="row1-buttons">
+                        <button type=button class="random" onclick="randomTopic()">Random</button>
+                        <button type="button" class="freeplay" onclick="freeMode()">Free Mode</button>
+                    </div>
+
+                </form>
+            </div>
+            <div class="row2">
+                
+                <table id="fretboard" class="fretboard">
+                    <tr class="fret-numbers">
+                        <th>0</th>
+                        <th class="first">1</th>
+                        <th>2</th>
+                        <th>3</th>
+                        <th>4</th>
+                        <th>5</th>
+                        <th class="six">6</th>
+                        <th>7</th>
+                        <th>8</th>
+                        <th>9</th>
+                        <th>10</th>
+                        <th>11</th>
+                        <th>12</th>
+                    </tr>
+                    <tr id="e-string">
+                        <th>E</th>
+                        <td>
+                            <button class="first" onclick="showNote(this)">F</button>
+                        </td>
+                        <td>
+                            <button onclick="showNote(this)">F#</button>
+                        </td>
+                        <td>
+                            <button onclick="showNote(this)">G</button>
+                        </td>
+                        <td>
+                            <button onclick="showNote(this)">G#</button>
+                        </td>
+                        <td>
+                            <button onclick="showNote(this)">A</button>  
+                        </td>
+                        <td>
+                            <button class="six" onclick="showNote(this)">A#</button>
+                        </td>
+                        <td>
+                            <button onclick="showNote(this)">B</button>
+                        </td>
+                        <td>
+                            <button onclick="showNote(this)">C</button>
+                        </td>
+                        <td>
+                            <button onclick="showNote(this)">C#</button>
+                        </td>
+                        <td>
+                            <button onclick="showNote(this)">D</button>
+                        </td>
+                        <td>
+                            <button onclick="showNote(this)">D#</button>
+                        </td>
+                        <td>
+                            <button onclick="showNote(this)">E</button>
+                        </td>
+                    </tr>
+                    <tr id="B-string">
+                        <th>B</th>
+                        <td>
+                            <button class="first" onclick="showNote(this)">C</button>
+                        </td>
+                        <td>
+                            <button onclick="showNote(this)">C#</button>
+                        </td>
+                        <td>
+                            <button onclick="showNote(this)">D</button>
+                        </td>
+                        <td>
+                            <button onclick="showNote(this)">D#</button>
+                        </td>
+                        <td>
+                            <button onclick="showNote(this)">E</button>
+                        </td>
+                        <td>
+                            <button class="six" onclick="showNote(this)">F</button>
+                        </td>
+                        <td>
+                            <button onclick="showNote(this)">F#</button>
+                        </td>
+                        <td>
+                            <button onclick="showNote(this)">G</button>
+                        </td>
+                        <td>
+                            <button onclick="showNote(this)">G#</button>
+                        </td>
+                        <td>
+                            <button onclick="showNote(this)">A</button>  
+                        </td>
+                        <td>
+                            <button onclick="showNote(this)">A#</button>
+                        </td>
+                        <td>
+                            <button onclick="showNote(this)">B</button>
+                        </td>
+                    </tr>
+                    <tr id="G-string">
+                        <th>G</th>
+                        <td>
+                            <button class="first" onclick="showNote(this)">G#</button>
+                        </td>
+                        <td>
+                            <button onclick="showNote(this)">A</button>  
+                        </td>
+                        <td>
+                            <button onclick="showNote(this)">A#</button>
+                        </td>
+                        <td>
+                            <button onclick="showNote(this)">B</button>
+                        </td>
+                        <td>
+                            <button onclick="showNote(this)">C</button>
+                        </td>
+                        <td>
+                            <button class="six" onclick="showNote(this)">C#</button>
+                        </td>
+                        <td>
+                            <button onclick="showNote(this)">D</button>
+                        </td>
+                        <td>
+                            <button onclick="showNote(this)">D#</button>
+                        </td>
+                        <td>
+                            <button onclick="showNote(this)">E</button>
+                        </td>
+                        <td>
+                            <button onclick="showNote(this)">F</button>
+                        </td>
+                        <td>
+                            <button onclick="showNote(this)">F#</button>
+                        </td>
+                        <td>
+                            <button onclick="showNote(this)">G</button>
+                        </td>
+                    </tr>
+                    <tr id="D-string">
+                        <th>D</th>
+                        <td>
+                            <button class="first" onclick="showNote(this)">D#</button>
+                        </td>
+                        <td>
+                            <button onclick="showNote(this)">E</button>
+                        </td>
+                        <td>
+                            <button onclick="showNote(this)">F</button>
+                        </td>
+                        <td>
+                            <button onclick="showNote(this)">F#</button>
+                        </td>
+                        <td>
+                            <button onclick="showNote(this)">G</button>
+                        </td>
+                        <td>
+                            <button class="six" onclick="showNote(this)">G#</button>
+                        </td>
+                        <td>
+                            <button onclick="showNote(this)">A</button>  
+                        </td>
+                        <td>
+                            <button onclick="showNote(this)">A#</button>
+                        </td>
+                        <td>
+                            <button onclick="showNote(this)">B</button>
+                        </td>
+                        <td>
+                            <button onclick="showNote(this)">C</button>
+                        </td>
+                        <td>
+                            <button onclick="showNote(this)">C#</button>
+                        </td>
+                        <td>
+                            <button onclick="showNote(this)">D</button>
+                        </td>
+                    </tr>
+                    <tr id="A-string">
+                        <th>A</th>
+                        <td>
+                            <button class="first" onclick="showNote(this)">A#</button>
+                        </td>
+                        <td>
+                            <button onclick="showNote(this)">B</button>
+                        </td>
+                        <td>
+                            <button onclick="showNote(this)">C</button>
+                        </td>
+                        <td>
+                            <button onclick="showNote(this)">C#</button>
+                        </td>
+                        <td>
+                            <button onclick="showNote(this)">D</button>
+                        </td>
+                        <td>
+                            <button class="six" onclick="showNote(this)">D#</button>
+                        </td>
+                        <td>
+                            <button onclick="showNote(this)">E</button>
+                        </td>
+                        <td>
+                            <button onclick="showNote(this)">F</button>
+                        </td>
+                        <td>
+                            <button onclick="showNote(this)">F#</button>
+                        </td>
+                        <td>
+                            <button onclick="showNote(this)">G</button>
+                        </td>
+                        <td>
+                            <button onclick="showNote(this)">G#</button>
+                        </td>
+                        <td>
+                            <button onclick="showNote(this)">A</button>  
+                        </td>
+                    </tr>
+                    <tr id="E-string">
+                        <th>E</th>
+                        <td>
+                            <button class="first" onclick="showNote(this)">F</button>
+                        </td>
+                        <td>
+                            <button onclick="showNote(this)">F#</button>
+                        </td>
+                        <td>
+                            <button onclick="showNote(this)">G</button>
+                        </td>
+                        <td>
+                            <button onclick="showNote(this)">G#</button>
+                        </td>
+                        <td>
+                            <button onclick="showNote(this)">A</button>  
+                        </td>
+                        <td>
+                            <button class="six" onclick="showNote(this)">A#</button>
+                        </td>
+                        <td>
+                            <button onclick="showNote(this)">B</button>
+                        </td>
+                        <td>
+                            <button onclick="showNote(this)">C</button>
+                        </td>
+                        <td>
+                            <button onclick="showNote(this)">C#</button>
+                        </td>
+                        <td>
+                            <button onclick="showNote(this)">D</button>
+                        </td>
+                        <td>
+                            <button onclick="showNote(this)">D#</button>
+                        </td>
+                        <td>
+                            <button onclick="showNote(this)">E</button>
+                        </td>
+                    </tr>
+
+                </table>
+            
+            </div>
+            <div class="row3">
+                <button class="reset" onclick="resetBoard()">Clear Fretboard</button>
+                <button class="show" onclick="showBoard()">Show Board</button>
+                <button class="show-specific" onclick="showSelected()">Show Answers</button>
+            </div>
+        </div>
+
+    </body>

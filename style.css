@@ -1,0 +1,96 @@
+html {
+    font-family: Verdana;
+    font-size: larger;
+}
+
+
+body {
+    margin: auto;
+    position:relative;
+    text-align: center;
+    background-color: lightgray;
+}
+
+.row1 .radios {
+    text-align: center;
+    text-decoration: none;
+    display: inline-flex;
+
+    height: fit-content;
+    margin: auto;
+}
+.row1 .row1-buttons button, .row3 button {
+    text-align: center;
+    font-size: larger;
+    margin-left:10px;
+    padding: 15px 30px;
+    border-radius: 4px;
+    border: none;
+    background-color: rgb(157, 87, 222);
+    color: white;
+    cursor: pointer;
+}
+.row3 {
+    margin-top: 10px;
+    text-align:center;
+    overflow: hidden;
+
+}
+.row2 {
+    display: inline-flex;
+    width: 1300px;
+    position: relative;
+    height: 530px;
+    background-image: url("assets/fretboard.png");
+    background-size: 1155px;
+    background-position-x: 50px;
+    background-position-y: 80px;
+    background-repeat: no-repeat;
+}
+.note-picker {
+    display: inline-flex;
+    text-align: center;
+    padding:10px 10px;
+}
+
+
+.fretboard {
+    
+    height:470px;
+    tr {
+        margin: 10px;
+        width: 30px;
+    }
+}
+
+.fretboard button {
+    width: 50px;
+    font-size: large;
+    font-weight: bold;
+
+    color: transparent;
+    border: none;
+    padding: 7px 0;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 100%;
+}
+.fretboard button:hover {
+    background-color: gray;
+    color: gray;
+}
+.first, .six {
+    margin-right:12px;
+}
+td, 
+th {
+    width: 30px;
+    padding: 7px 20px;
+}
+
+
+
+
+
+
+
